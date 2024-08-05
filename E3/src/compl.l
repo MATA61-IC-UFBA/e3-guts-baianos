@@ -9,13 +9,18 @@
 
 %}
 
-%%
-
-"if" 				{ return IF; } // incluir IF em token.h
-
-. 				{ return ERROR; }
-
 
 %%
 
+"//".*              {/* pula comentario */}
+[ \t\n\r]+          {/* pula espacejamento */}
+[0-9]+              {return NUM;}
+array|boolean|char|else|false|for|function|if|integer|print|return|string|true|void|while   { return KEY;}
+"<="|">="|"=="|"!="|"&&"|"||"                                                               { return SYMC;}
+"+"|"-"|"*"|"/"|"%"|"!"|"<"|">"|"="|":"|";"|","|"("|")"|"["|"]"|"{"|"}"|"\\"                { return SYM;}
+[a-zA-Z]+           {return ID;}
+\"([^"\n\r])*\"   {return STR;}
+'([^'\\\n\r]|\\.)'   {return CHAR;}
+.                   {return ERROR;}
 
+%%

@@ -10,4 +10,3 @@ typedef enum {
 	STR,
 	ERROR
 } token_t; 
-
