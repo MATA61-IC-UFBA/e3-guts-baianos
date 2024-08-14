@@ -18,7 +18,26 @@ typedef enum {
         TRUE,           //KEYWORD
         VOID,           //KEYWORD
         WHILE,          //KEYWORD
-        // SYM,         AGORA RETORNA VALOR ASC   
+        // SYM,
+        PLUS,           // SYM (+)
+        MINUS,          // SYM (-)
+        MULTIPLY,       // SYM (*)
+        DIVIDE,         // SYM (/)
+        MODULO,         // SYM (%)
+        NOT,            // SYM (!)
+        LT,             // SYM (<)
+        GT,             // SYM (>)
+        ASSIGN,         // SYM (=)
+        COLON,          // SYM (:)
+        SEMICOLON,      // SYM (;)
+        COMMA,          // SYM (,)
+        LPAREN,         // SYM ( ( )
+        RPAREN,         // SYM ( ) )
+        LBRACKET,       // SYM ( [ )
+        RBRACKET,       // SYM ( ] )
+        LBRACE,         // SYM ( { )
+        RBRACE,         // SYM ( } )
+        BACKSLASH    
         // SYMC,
         LTE,            // SYMC (<=)
         GTE,            // SYMC (>=)
