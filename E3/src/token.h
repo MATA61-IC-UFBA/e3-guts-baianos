@@ -1,23 +1,23 @@
 /* token.h */
 typedef enum {
         ID = 256, 
-	NUM, 
+        NUM, 
         // KEY, 
-        ARRAY,          //KEYWORD
-        BOOLEAN,        //KEYWORD
-        CHAR,           //KEYWORD
-        ELSE,           //KEYWORD
-        FALSE,          //KEYWORD
-        FOR,            //KEYWORD
-        FUNCTION,       //KEYWORD
-        IF,             //KEYWORD
-        INTEGER,        //KEYWORD
-        PRINT,          //KEYWORD
-        RETURN,         //KEYWORD
-        STRING,         //KEYWORD
-        TRUE,           //KEYWORD
-        VOID,           //KEYWORD
-        WHILE,          //KEYWORD
+        ARRAY,          // KEYWORD
+        BOOLEAN,        // KEYWORD
+        CHARACTER,           // KEYWORD
+        ELSE,           // KEYWORD
+        FALSE,          // KEYWORD
+        FOR,            // KEYWORD
+        FUNCTION,       // KEYWORD
+        IF,             // KEYWORD
+        INTEGER,        // KEYWORD
+        PRINT,          // KEYWORD
+        RETURN,         // KEYWORD
+        STRING,         // KEYWORD
+        TRUE,           // KEYWORD
+        VOID,           // KEYWORD
+        WHILE,          // KEYWORD
         // SYM,
         PLUS,           // SYM (+)
         MINUS,          // SYM (-)
@@ -37,7 +37,7 @@ typedef enum {
         RBRACKET,       // SYM ( ] )
         LBRACE,         // SYM ( { )
         RBRACE,         // SYM ( } )
-        BACKSLASH    
+        BACKSLASH,      // SYM (\)
         // SYMC,
         LTE,            // SYMC (<=)
         GTE,            // SYMC (>=)
@@ -45,7 +45,7 @@ typedef enum {
         NEQ,            // SYMC (!=)
         AND,            // SYMC (&&)
         OR,             // SYMC (||)
-        // CHAR,        AGORA RETORNA VALOR ASC
+        CHAR,        
 	STR,
 	ERROR
 } token_t; 

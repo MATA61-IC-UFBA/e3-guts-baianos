@@ -6,8 +6,6 @@
 //               that copies otherwise unmatched input to yyout.
 
 #include "token.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 %}
 
@@ -19,7 +17,7 @@
 [0-9]+              {return NUM;}
 "array"             { return ARRAY; }          
 "boolean"           { return BOOLEAN; }        
-"char"              { return CHAR; }           
+"char"              { return CHARACTER; }           
 "else"              { return ELSE; }           
 "false"             { return FALSE; }          
 "for"               { return FOR; }            
@@ -38,25 +36,25 @@
 "!="                { return NEQ; }    
 "&&"                { return AND; }    
 "||"                { return OR; }     
-"+"     { return PLUS; }        
-"-"     { return MINUS; }       
-"*"     { return MULTIPLY; }    
-"/"     { return DIVIDE; }      
-"%"     { return MODULO; }      
-"!"     { return NOT; }         
-"<"     { return LESS_THAN; }   
-">"     { return GREATER_THAN; }
-"="     { return ASSIGN; }      
-":"     { return COLON; }       
-";"     { return SEMICOLON; }   
-","     { return COMMA; }       
-"("     { return LPAREN; }      
-")"     { return RPAREN; }      
-"["     { return LBRACKET; }    
-"]"     { return RBRACKET; }    
-"{"     { return LBRACE; }      
-"}"     { return RBRACE; }      
-"\\"    { return BACKSLASH; }   
+"+"             { return PLUS; }        
+"-"             { return MINUS; }       
+"*"             { return MULTIPLY; }    
+"/"             { return DIVIDE; }      
+"%"             { return MODULO; }      
+"!"             { return NOT; }         
+"<"             { return LT; }   
+">"             { return GT; }
+"="             { return ASSIGN; }      
+":"             { return COLON; }       
+";"             { return SEMICOLON; }   
+","             { return COMMA; }       
+"("             { return LPAREN; }      
+")"             { return RPAREN; }      
+"["             { return LBRACKET; }    
+"]"             { return RBRACKET; }    
+"{"             { return LBRACE; }      
+"}"             { return RBRACE; }      
+"\\"            { return BACKSLASH; }   
 [a-zA-Z]+           {return ID;}
 \"([^"\n\r])*\"   {return STR;}
 '([^'\\\n\r]|\\.)'   {return CHAR;}
