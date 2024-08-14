@@ -6,6 +6,11 @@
 //               that copies otherwise unmatched input to yyout.
 
 #include "token.h"
+#include <stdio.h>
+
+int charToAscii(char c) {
+    return (int)c;
+}
 
 %}
 
@@ -30,34 +35,34 @@
 "true"              { return TRUE; }           
 "void"              { return VOID; }           
 "while"             { return WHILE; }          
-"<="                { return LTE; }    
+"<="                { return LEQ; }    
 ">="                { return GTE; }    
 "=="                { return EQ; }     
 "!="                { return NEQ; }    
 "&&"                { return AND; }    
 "||"                { return OR; }     
-"+"             { return PLUS; }        
-"-"             { return MINUS; }       
-"*"             { return MULTIPLY; }    
-"/"             { return DIVIDE; }      
-"%"             { return MODULO; }      
-"!"             { return NOT; }         
-"<"             { return LT; }   
-">"             { return GT; }
-"="             { return ASSIGN; }      
-":"             { return COLON; }       
-";"             { return SEMICOLON; }   
-","             { return COMMA; }       
-"("             { return LPAREN; }      
-")"             { return RPAREN; }      
-"["             { return LBRACKET; }    
-"]"             { return RBRACKET; }    
-"{"             { return LBRACE; }      
-"}"             { return RBRACE; }      
-"\\"            { return BACKSLASH; }   
+"+"                 { return charToAscii('+'); }        
+"-"                 { return charToAscii('-'); }       
+"*"                 { return charToAscii('*'); }    
+"/"                 { return charToAscii('/'); }      
+"%"                 { return charToAscii('%'); }      
+"!"                 { return charToAscii('!'); }         
+"<"                 { return charToAscii('<'); }   
+">"                 { return charToAscii('>'); }
+"="                 { return charToAscii('='); }      
+":"                 { return charToAscii(':'); }       
+";"                 { return charToAscii(';'); }   
+","                 { return charToAscii(','); }       
+"("                 { return charToAscii('('); }      
+")"                 { return charToAscii(')'); }      
+"["                 { return charToAscii('['); }    
+"]"                 { return charToAscii(']'); }    
+"{"                 { return charToAscii('{'); }      
+"}"                 { return charToAscii('}'); }      
+"\\"                { return charToAscii('\\'); }   
 [a-zA-Z]+           {return ID;}
-\"([^"\n\r])*\"   {return STR;}
-'([^'\\\n\r]|\\.)'   {return CHAR;}
+\"([^"\n\r])*\"     {return STR;}
+'([^'\\\n\r]|\\.)'  {return CHAR;}
 .                   {return ERROR;}
 
 %%

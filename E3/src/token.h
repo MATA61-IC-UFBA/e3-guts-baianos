@@ -39,7 +39,7 @@ typedef enum {
         RBRACE,         // SYM ( } )
         BACKSLASH,      // SYM (\)
         // SYMC,
-        LTE,            // SYMC (<=)
+        LEQ=273,            // SYMC (<=)
         GTE,            // SYMC (>=)
         EQ,             // SYMC (==)
         NEQ,            // SYMC (!=)
